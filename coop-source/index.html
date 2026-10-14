@@ -1,0 +1,156 @@
+<!doctype html>
+<html lang="ar" dir="rtl">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width,initial-scale=1,viewport-fit=cover">
+<title>CO-OP Accounting Hub | منصة التدريب التعاوني للمحاسبين</title>
+<meta name="description" content="كل ما يحتاجه طالب المحاسبة للتدريب التعاوني في مكان واحد: دليل أكثر من 500 جهة بالإيميلات وروابط التقديم، خطوات التقديم، بنك أسئلة المقابلات بإجاباتها، ومتابعة تقديماتك.">
+<meta name="theme-color" content="#0b1733">
+<meta property="og:title" content="CO-OP Accounting Hub — منصة التدريب التعاوني للمحاسبين">
+<meta property="og:description" content="دليل جهات التدريب، خطوات التقديم، وبنك أسئلة المقابلات بإجاباتها.">
+<meta property="og:type" content="website">
+<link rel="icon" href="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 64 64'%3E%3Crect width='64' height='64' rx='16' fill='%230a1a3a'/%3E%3Ccircle cx='26' cy='32' r='12' fill='none' stroke='%23e6c27f' stroke-width='5'/%3E%3Ccircle cx='38' cy='32' r='12' fill='none' stroke='%23ffffff' stroke-width='5'/%3E%3C/svg%3E">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=IBM+Plex+Sans+Arabic:wght@400;500;600;700&family=Readex+Pro:wght@500;600;700&family=Amiri:wght@700&display=swap">
+<script>try{var t=localStorage.getItem('coop:theme');if(t)document.documentElement.dataset.theme=JSON.parse(t)}catch(e){}document.documentElement.classList.add('js')</script>
+<link rel="stylesheet" href="style.css">
+</head>
+<body>
+<div id="prog" aria-hidden="true"></div>
+<a class="sr" href="#employers">تخطَّ إلى الدليل</a>
+
+<header class="top"><div class="wrap bar">
+ <a class="brand" href="#" aria-label="الرئيسية"><img src="assets/coop.png" alt="CO-OP Accounting" width="44" height="40"><span><b>CO-OP Accounting Hub</b><small>نادي الإرشاد الأكاديمي</small></span></a>
+ <nav class="main" aria-label="الأقسام">
+  <a href="#employers">دليل الجهات</a><a href="#tracker">متابعة تقديماتي</a><a href="#apply">خطوات التقديم</a><a href="#interview">أسئلة المقابلات</a><a href="#tips">نصائح</a>
+ </nav>
+ <div class="hbtns">
+  <button class="ibtn kbtn" id="openPal" type="button" aria-label="بحث سريع"><span class="ic" data-i="search"></span><span class="t">بحث سريع</span><kbd>Ctrl K</kbd></button>
+  <button class="ibtn" id="theme" type="button" aria-label="تبديل المظهر"><span class="ic" data-i="moon"></span></button>
+ </div>
+</div></header>
+
+<div class="hero"><div class="wrap in">
+ <div>
+  <span class="dua"><span class="ic" data-i="heart" style="width:15px;height:15px"></span>دعواتكم لوليد الأصيقع</span>
+  <h1>كل ما يحتاجه طالب المحاسبة <em>للتدريب التعاوني</em>، في مكان واحد</h1>
+  <p class="tag">إرشاد يُبصّر.. وطريق يتيسّر</p>
+  <p class="d">دليل جهات التدريب مع الإيميلات وروابط التقديم، وخطوات التقديم بالتفصيل، وبنك أسئلة المقابلات بإجاباتها من تجارب طلاب جامعة الإمام — مع أدوات تساعدك تتابع تقديماتك وتتدرّب على المقابلة.</p>
+  <div class="hs">
+   <form class="box" id="hform" role="search"><span class="ic" data-i="search"></span><input id="hq" type="search" placeholder="ابحث عن جهة: KPMG، سابك، بنك الرياض…" autocomplete="off" aria-label="ابحث عن جهة"><button class="go" type="submit"><span class="lg">ابحث في الدليل</span><span class="smt">ابحث</span></button></form>
+   <div class="hres" id="hres" hidden></div>
+  </div>
+  <div class="qs"><span>بحث شائع:</span><button type="button" data-q="KPMG">KPMG</button><button type="button" data-q="Deloitte">Deloitte</button><button type="button" data-q="بنك">البنوك</button><button type="button" data-q="هيئة">الهيئات</button><button type="button" data-q="أرامكو">أرامكو</button></div>
+  <div class="stats" id="stats"></div>
+ </div>
+ <div class="art" aria-hidden="true">
+  <div class="ring"></div><div class="ring2"></div>
+  <img class="bot" src="assets/bot.png" alt="" width="166" height="300">
+  <div class="chip c1"><span class="ic" data-i="mail"></span>إيميلات وروابط تقديم</div>
+  <div class="chip c2"><span class="ic" data-i="spark"></span>أسئلة المقابلات بإجاباتها</div>
+ </div>
+</div></div>
+
+<main>
+<div class="wrap">
+ <div class="feats">
+  <a class="feat rv" href="#employers"><span class="fi"><span class="ic" data-i="building"></span></span><span><b>دليل الجهات</b><span>ابحث وفلتر وانسخ الإيميل أو افتح رابط التقديم</span></span></a>
+  <a class="feat rv" href="#tracker"><span class="fi"><span class="ic" data-i="kanban"></span></span><span><b>متابعة تقديماتي</b><span>احفظ الجهات وتابع حالة كل تقديم والتذكيرات</span></span></a>
+  <a class="feat rv" href="#apply"><span class="fi"><span class="ic" data-i="send"></span></span><span><b>خطوات التقديم</b><span>جهّز ملفاتك وولّد إيميل التقديم بضغطة</span></span></a>
+  <a class="feat rv" href="#interview"><span class="fi"><span class="ic" data-i="cards"></span></span><span><b>تدرّب على المقابلة</b><span>بنك أسئلة بإجاباتها مع وضع البطاقات</span></span></a>
+ </div>
+</div>
+
+<section class="sec" id="employers"><div class="wrap">
+ <div class="sh rv"><div><span class="eyebrow"><span class="ic" data-i="building" style="width:15px;height:15px"></span>الدليل</span><h2>دليل جهات التدريب التعاوني</h2><p>ابحث بالاسم أو المدينة أو الإيميل، واختر نوع الجهة والقطاع، ثم انسخ الإيميل أو افتح رابط التقديم. اضغط <b>★</b> لحفظ الجهة في قائمة متابعتك.</p></div></div>
+ <div class="card tools">
+  <div class="srow">
+   <label class="field"><span class="ic" data-i="search"></span><span class="sr">بحث في الدليل</span><input id="dq" type="search" placeholder="ابحث باسم الجهة أو المدينة أو الإيميل…" autocomplete="off"></label>
+   <select class="sel" id="ssel" aria-label="القطاع"></select>
+   <select class="sel" id="sort" aria-label="الترتيب" style="flex-basis:170px"><option value="d">الترتيب: الأنسب</option><option value="a">الاسم (أ ← ي)</option><option value="r">الأكثر بيانات تواصل</option></select>
+  </div>
+  <div class="seg" id="gtabs" role="group" aria-label="نوع الجهة"></div>
+  <div class="togs" id="togs">
+   <button class="tg" type="button" data-f="m" aria-pressed="false"><span class="ic" data-i="mail"></span>لها إيميل</button>
+   <button class="tg" type="button" data-f="l" aria-pressed="false"><span class="ic" data-i="link"></span>لها رابط تقديم</button>
+   <button class="tg" type="button" data-f="i" aria-pressed="false"><span class="ic" data-i="in"></span>لها لينكدإن</button>
+   <button class="tg" type="button" data-f="w" aria-pressed="false"><span class="ic" data-i="spark"></span>من قائمة وليد</button>
+   <button class="tg" type="button" data-f="fav" aria-pressed="false"><span class="ic" data-i="star"></span>المحفوظة</button>
+   <span class="sp"></span>
+   <span class="cnt" id="cnt" aria-live="polite"></span>
+   <button class="btn ghost sm" id="reset" type="button" hidden><span class="ic" data-i="x"></span>مسح الفلاتر</button>
+  </div>
+ </div>
+ <div class="grid" id="dl"></div>
+ <div class="morebox"><button class="btn" id="more" type="button" hidden>عرض المزيد</button></div>
+ <p class="fine"><span class="ic" data-i="info"></span><span>الإيميلات العامة التي تبدأ بـ info حُذفت. لم يُختبر وصول الإيميلات فعلياً، فتأكد من موقع الجهة قبل التقديم. شارة «قائمة وليد» تعني أن الجهة موجودة في قائمة شاركها وليد.</span></p>
+</div></section>
+
+<section class="sec" id="tracker"><div class="wrap">
+ <div class="sh rv"><div><span class="eyebrow"><span class="ic" data-i="kanban" style="width:15px;height:15px"></span>أداة شخصية</span><h2>متابعة تقديماتي</h2><p>كل جهة تحفظها من الدليل تظهر هنا. حدّث حالتها أول بأول، وننبهك إذا مرّ أسبوع على تقديمك عشان ترسل التذكير. البيانات محفوظة في متصفحك فقط.</p></div></div>
+ <div class="pipe" id="pipe"></div>
+ <div class="trows" id="trows"></div>
+ <div class="tbar" id="tbar"></div>
+</div></section>
+
+<section class="sec" id="apply"><div class="wrap">
+ <div class="sh rv"><div><span class="eyebrow"><span class="ic" data-i="send" style="width:15px;height:15px"></span>الدليل العملي</span><h2>دليل التقديم خطوة بخطوة</h2><p>كيف تجهّز ملفاتك، وكيف تقدّم بالإيميل أو لينكدإن أو موقع الجهة — مع مولّد إيميل جاهز.</p></div></div>
+ <div class="guide">
+  <div class="card gnav" id="gnav" role="tablist" aria-label="مراحل التقديم"></div>
+  <div id="gpanel" role="tabpanel"></div>
+ </div>
+</div></section>
+
+<section class="sec" id="interview"><div class="wrap">
+ <div class="sh rv"><div><span class="eyebrow"><span class="ic" data-i="cards" style="width:15px;height:15px"></span>بنك الأسئلة</span><h2>أسئلة مقابلات المحاسبة</h2><p>من تجارب طلاب جامعة الإمام، مع الإجابات. غالب المقابلات بالعربي، وبعض الأسئلة تجي بالإنجليزي مثل «تكلّم عن نفسك» وأسماء القوائم المالية. وتختلف صعوبتها من جهة لجهة وحسب الشخص اللي يقابلك.</p></div></div>
+ <div class="path" id="path"></div>
+ <div class="qtop">
+  <div class="seg" id="qmode" role="tablist" aria-label="طريقة العرض">
+   <button type="button" role="tab" data-m="list" aria-selected="true"><span class="ic" data-i="list"></span>قائمة الأسئلة</button>
+   <button type="button" role="tab" data-m="prac" aria-selected="false"><span class="ic" data-i="cards"></span>وضع التدريب</button>
+  </div>
+  <div class="prg" aria-live="polite"><div class="tr"><i id="qbar"></i></div><span id="qprog"></span></div>
+ </div>
+ <div class="card qtools">
+  <div class="srow">
+   <label class="field"><span class="ic" data-i="search"></span><span class="sr">بحث في الأسئلة</span><input id="qq" type="search" placeholder="ابحث في الأسئلة والإجابات: إهلاك، زكاة، تدفقات…" autocomplete="off"></label>
+  </div>
+  <div class="seg" id="qchips" role="group" aria-label="تصنيف الأسئلة"></div>
+  <div class="togs">
+   <button class="tg" type="button" id="qunm" aria-pressed="false"><span class="ic" data-i="target"></span>غير المتقنة فقط</button>
+   <span class="sp"></span>
+   <span class="cnt" id="qcnt"></span>
+   <span id="lctl"><button class="btn ghost sm" id="qopen" type="button">فتح الكل</button><button class="btn ghost sm" id="qclose" type="button">إغلاق الكل</button></span>
+  </div>
+ </div>
+ <div class="qlist" id="ql"></div>
+ <div class="card prac" id="prac" hidden></div>
+</div></section>
+
+<section class="sec" id="tips"><div class="wrap">
+ <div class="sh rv"><div><span class="eyebrow"><span class="ic" data-i="bulb" style="width:15px;height:15px"></span>خلاصة التجارب</span><h2>نصائح من تجارب الطلاب</h2><p>نصائح عملية جمعناها من طلاب مرّوا بنفس الطريق، وقائمة تجهيز تتأكد فيها إنك جاهز قبل يوم المقابلة.</p></div></div>
+ <div class="tips2">
+  <div class="tips" id="tl"></div>
+  <div class="card chk" id="chk"></div>
+ </div>
+</div></section>
+</main>
+
+<footer><div class="wrap in">
+ <p class="duaf">دعواتكم لوليد الأصيقع</p>
+ <div class="logos"><img src="assets/club.png" alt="نادي الإرشاد الأكاديمي" width="46" height="52"><img src="assets/coop.png" alt="CO-OP Accounting" width="58" height="52"><img src="assets/uni.png" alt="جامعة الإمام" width="36" height="52"></div>
+ <div>حسابات نادي الإرشاد الأكاديمي</div>
+ <div class="acc"><span>X / LinkedIn: @advisingclup</span><span>TikTok: @advisingclup2</span></div>
+ <p class="tag">إرشاد يُبصّر.. وطريق يتيسّر</p>
+ <small>المحتوى إرشادي من تجارب طلاب جامعة الإمام، ويُنصح بالتحقق من الأنظمة والنسب من المصادر الرسمية. بيانات الجهات مجمّعة من قوائم منشورة، وقد تتغير الإيميلات وطرق التقديم.</small>
+ <div class="cp">CO-OP Accounting Hub · نادي الإرشاد الأكاديمي</div>
+</div></footer>
+
+<button id="top" type="button" aria-label="العودة للأعلى"><span class="ic" data-i="up"></span></button>
+<div class="toast" id="toast" role="status" aria-live="polite"><span class="ic" data-i="check"></span><span id="toastT"></span></div>
+
+<script src="data.js"></script>
+<script src="app.js"></script>
+</body>
+</html>
