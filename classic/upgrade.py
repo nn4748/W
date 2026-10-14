@@ -9,9 +9,52 @@ body_start=h.index('<header class="top">')
 body=h[body_start:]
 body=re.sub(r'</body></html><script async src="/\.netlify/scripts/hud[^<]*</script>\s*$','',body.strip())
 body=re.sub(r'</body></html>\s*$','',body)
-fonts=re.search(r'<link rel="stylesheet" href="(https://fonts.googleapis.com[^"]+)">',h).group(1)
+fonts='https://fonts.googleapis.com/css2?family=IBM+Plex+Sans+Arabic:wght@400;500;600;700&family=Amiri:wght@700&display=swap'
 
 EXTRA_CSS=r'''
+/* ===== quality: typography & finish (same layout/colors) ===== */
+:root{--font-b:-apple-system,BlinkMacSystemFont,'SF Arabic','IBM Plex Sans Arabic','Segoe UI',Tahoma,sans-serif;
+ --sh1:0 1px 2px #0b1f460d,0 6px 18px -10px #0b1f4626;--sh2:0 2px 6px #0b1f4612,0 22px 44px -22px #0b1f4659}
+@media (prefers-color-scheme:dark){:root:not([data-theme="light"]){--sh1:0 1px 2px #0006,0 8px 22px -12px #000a;--sh2:0 2px 6px #0007,0 24px 48px -22px #000c}}
+:root[data-theme="dark"]{--sh1:0 1px 2px #0006,0 8px 22px -12px #000a;--sh2:0 2px 6px #0007,0 24px 48px -22px #000c}
+body{font-size:15.5px;line-height:1.85;font-kerning:normal;font-feature-settings:"kern" 1}
+p,.lead,.row .m,.qb p{text-wrap:pretty}
+.hero h1{font-weight:800;line-height:1.32;margin:6px 0 10px}
+.hero p.d{font-size:16px;line-height:1.9}
+.st h2{font-family:var(--font-b);font-weight:800;font-size:clamp(23px,3.8vw,31px);line-height:1.35}
+.st::after{height:2px;border-radius:2px}
+.lead{font-size:15px}
+.logo{font-weight:700}
+nav.sec a{font-weight:600;transition-duration:.25s}
+nav.sec a.on{background:#e8c27b;color:#0b1f46;border-color:#e8c27b}
+header.top{background:color-mix(in srgb,var(--navy) 90%,transparent);backdrop-filter:saturate(1.5) blur(14px);-webkit-backdrop-filter:saturate(1.5) blur(14px)}
+.hs input{border-radius:14px;padding:14px 18px;backdrop-filter:blur(10px);-webkit-backdrop-filter:blur(10px);transition:border-color .25s,background-color .25s,box-shadow .25s}
+.hs input:focus{outline:none;border-color:#e8c27b;background:#ffffff1f;box-shadow:0 0 0 4px #e8c27b33}
+.stats b{font-variant-numeric:tabular-nums}
+.search{border-radius:14px;padding:13px 16px;box-shadow:var(--sh1);transition:border-color .25s,box-shadow .25s}
+.search:focus{outline:none;border-color:var(--accent);box-shadow:0 0 0 4px color-mix(in srgb,var(--accent) 18%,transparent)}
+.chip{padding:6px 15px;font-weight:600}
+.chip.on,.chip[aria-pressed="true"]{box-shadow:0 6px 16px -8px color-mix(in srgb,var(--accent) 70%,transparent)}
+.row{border-radius:16px;padding:16px 18px;gap:8px;box-shadow:var(--sh1)}
+.row h4{font-weight:700;font-size:16.5px;line-height:1.5}
+.em{border-radius:10px}
+.em button{padding:4px 12px}
+.em span{font-size:13px;padding:4px 11px}
+a.lk{border-radius:10px;padding:4px 14px}
+.step,details.q,.mail,.tl div,.doc,.path .step{box-shadow:var(--sh1);border-radius:16px}
+.tip{border-radius:16px}
+.num{box-shadow:0 6px 14px -6px #c8963a}
+details.q summary{padding:14px 16px;line-height:1.6}
+details.q summary .qi{border-radius:9px}
+.qb{padding:14px 16px 18px;gap:12px}
+.en,.eq,.cmp>div{border-radius:12px}
+.tw{border-radius:14px}
+th{font-weight:700}
+.prompt{border-radius:14px}
+.more{border-radius:14px;padding:11px 28px}
+footer{border-top:1px solid #e8c27b33}
+@media (hover:hover){.row:hover,.step:hover,details.q:hover{box-shadow:var(--sh2)}}
+
 /* ===== enhancements: motion & speed (look unchanged) ===== */
 :root{--ease:cubic-bezier(.22,1,.36,1)}
 #prog{position:fixed;top:0;inset-inline:0;height:3px;z-index:60;background:linear-gradient(90deg,#c8963a,#e8c27b);transform-origin:right;transform:scaleX(0);pointer-events:none}
